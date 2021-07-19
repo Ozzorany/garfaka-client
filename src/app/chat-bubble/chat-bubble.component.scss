@@ -25,13 +25,13 @@
 }
 
 p.from-me {
-  background-color: #248bf5;
+  background-color: var(--darker-theme-color);
   color: #fff;
 }
 
 p.from-me::before {
   border-bottom-left-radius: 0.8rem 0.7rem;
-  border-right: 1rem solid #248bf5;
+  border-right: 1rem solid var(--darker-theme-color);
   right: -0.35rem;
   transform: translate(0, -0.1rem);
 }
