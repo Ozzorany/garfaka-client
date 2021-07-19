@@ -40,7 +40,7 @@ p.from-me::after {
   background-color: #fff;
   border-bottom-left-radius: 0.5rem;
   right: -40px;
-  transform:translate(-30px, -2px);
+  transform: translate(-30px, -2px);
   width: 10px;
 }
 
@@ -109,24 +109,11 @@ p[class^="from-"].emoji::before {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* general styling */
 @font-face {
   font-family: "SanFrancisco";
-  src:
-    url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff2") format("woff2"),
-    url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
+  src: url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff2") format("woff2"),
+  url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
 }
 
 body {
@@ -188,4 +175,10 @@ h2 {
   .imessage p {
     margin: 0.5rem 0;
   }
+}
+
+.time-style {
+  left: 0px !important;
+  position: relative;
+  font-size: 10px;
 }

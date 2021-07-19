@@ -1,16 +1,16 @@
-<div class="image" style="height: 100%">
-  <div style="border: 10px solid var(--main-theme-color); max-height: 92vh !important;"
-       class="w-100 h-100 d-flex flex-column justify-content-between">
-    <div style="overflow-y: auto; overflow-x: hidden; position: relative"
-         id="chat-window">
+<div class="image h-100">
+  <div class="w-100 h-100 d-flex flex-column justify-content-between chat-window-border">
+    <div class="chat-window-scroll" id="chat-window">
       <app-chat-bubble [message]="message" *ngFor="let message of messages"></app-chat-bubble>
     </div>
     <div class="d-flex flex-row align-items-center mb-2">
-      <div style="width: 90%" class="mx-3">
-        <input mdbInput type="text" class="search-input-form w-100 pr-2" style="border-radius:50px" [(ngModel)]="text">
+      <div class="mx-3 w-90">
+        <input mdbInput type="text" class="search-input-form w-100 pr-2" autofocus style="border-radius:50px"
+               [(ngModel)]="text">
       </div>
       <div style="cursor: pointer">
-        <mdb-icon style="color: #009894" mdbWavesEffect fas icon="angle-double-left" size="2x" (click)="sendMessage() "></mdb-icon>
+        <mdb-icon style="color: var(--darker-theme-color)" mdbWavesEffect fas icon="angle-double-left" size="2x"
+                  (click)="sendMessage() "></mdb-icon>
       </div>
     </div>
   </div>

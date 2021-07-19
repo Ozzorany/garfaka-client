@@ -11,3 +11,15 @@
   background-image: url("../../assets/img/chat_background.jpg");
   position: relative;
 }
+
+.chat-window-border {
+  border-right: 10px solid var(--main-theme-color);
+  border-left: 10px solid var(--main-theme-color);
+  max-height: 92vh !important;
+}
+
+.chat-window-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative
+}

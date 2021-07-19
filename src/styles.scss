@@ -1,5 +1,6 @@
 :root {
   --main-theme-color: #02dad4;
+  --darker-theme-color: #009894;
 }
 
 ::-webkit-scrollbar {
@@ -21,4 +22,8 @@
 
 p {
   font-family: Arial;
+}
+
+.w-90 {
+  width: 90%
 }

@@ -1,19 +1,14 @@
-<!--Navbar-->
 <mdb-navbar SideClass="navbar navbar-expand-lg fixed-top" [containerInside]="false">
-
-  <!-- Navbar brand -->
-  <mdb-navbar-brand><h1 class="navbar-brand font-weight-bold p-0 m-0" style="font-size: 32px" href="#">גרפאקה</h1></mdb-navbar-brand>
-
-  <!-- Collapsible content -->
+  <mdb-navbar-brand><h1 class="navbar-brand font-weight-bold p-0 m-0" style="font-size: 32px">גרפאקה</h1>
+  </mdb-navbar-brand>
   <links>
     <ul class="navbar-nav mr-auto nav-flex-icons">
       <li class="nav-item">
         <a class="nav-link">
-          <img src="../../assets/img/garfak_face.jpeg" style="border-radius: 50%; width: 3.5vw;">
+          <img src="{{imgUrl}}" class="navbar-icon" (click)="iconClicked()">
         </a>
       </li>
     </ul>
   </links>
-
 </mdb-navbar>
 

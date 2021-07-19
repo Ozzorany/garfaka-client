@@ -11,6 +11,7 @@ import { ChatWindowComponent } from './chat-window/chat-window.component';
 import { ChatBubbleComponent } from './chat-bubble/chat-bubble.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {MessageService} from './services/message.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
