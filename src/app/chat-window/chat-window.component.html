@@ -1,17 +1,17 @@
-<div style="border: 10px solid var(--main-theme-color)" class="w-100 h-100 d-flex flex-column justify-content-between">
-  <div style="max-height: 80vh;
-  height: calc(100% - 40px);
-  overflow-y: auto"
-       id="chat-window">
-    <app-chat-bubble [message]="message" *ngFor="let message of messages"></app-chat-bubble>
-  </div>
-  <div class="d-flex flex-row">
-    <div style="width: 90%">
-      <textarea
-        style="width: 90%; height: 40px;margin: 0 40px;border-radius: 50px; outline: none; resize: none"></textarea>
+<div class="image" style="height: 100%">
+  <div style="border: 10px solid var(--main-theme-color)"
+       class="w-100 h-100 d-flex flex-column justify-content-between">
+    <div style="overflow-y: auto; overflow-x: hidden; position: relative"
+         id="chat-window">
+      <app-chat-bubble [message]="message" *ngFor="let message of messages"></app-chat-bubble>
     </div>
-    <div style="cursor: pointer">
-      <mdb-icon fas icon="angle-double-left" size="2x"></mdb-icon>
+    <div class="d-flex flex-row align-items-center mb-2">
+      <div style="width: 90%" class="mx-3">
+        <input mdbInput type="text" class="search-input-form w-100 pr-2" style="border-radius:50px" [(ngModel)]="text">
+      </div>
+      <div style="cursor: pointer">
+        <mdb-icon mdbWavesEffect fas icon="angle-double-left" size="2x" (click)="sendMessage() "></mdb-icon>
+      </div>
     </div>
   </div>
 </div>

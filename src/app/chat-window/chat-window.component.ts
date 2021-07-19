@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Message} from '../message';
+import {MessageService} from '../services/message.service';
 
 @Component({
   selector: 'app-chat-window',
@@ -8,21 +9,43 @@ import {Message} from '../message';
 })
 export class ChatWindowComponent implements OnInit {
   messages: Message[] = [];
+  text = '';
 
-  constructor() {
+  constructor(private messageService: MessageService) {
   }
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.addMessage();
-    }, 1000);
   }
 
-  private addMessage(): void {
-    this.messages.push(new Message('תות תרנגול', new Date(), new Date().getMilliseconds() % 2 === 0));
+  private scrollDown(): void {
     const scroll = document.getElementById('chat-window');
     setTimeout(() => {
-      scroll.scrollTop = scroll.scrollHeight;
+      if (scroll) {
+        scroll.scrollTop = scroll.scrollHeight;
+      }
     }, 10);
+  }
+
+  sendMessage(): void {
+    if (this.text.trim().length) {
+      this.messages.push(new Message(this.text, new Date(), false));
+      this.scrollDown();
+      this.sendMessageToModel();
+      this.text = '';
+
+    }
+  }
+
+  sendMessageToModel(): void {
+    this.messageService.sendMessage(this.text).subscribe(response => {
+      this.messages.push(new Message(response, new Date(), true));
+      this.scrollDown();
+    });
+  }
+
+
+  @HostListener('document:keydown.enter', ['$event'])
+  onKeydownHandler(event: KeyboardEvent): void {
+    this.sendMessage();
   }
 }

@@ -9,6 +9,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ChatBoxComponent } from './chat-box/chat-box.component';
 import { ChatWindowComponent } from './chat-window/chat-window.component';
 import { ChatBubbleComponent } from './chat-bubble/chat-bubble.component';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ChatBubbleComponent } from './chat-bubble/chat-bubble.component';
     BrowserAnimationsModule,
     NavbarModule,
     WavesModule,
-    ButtonsModule
+    ButtonsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

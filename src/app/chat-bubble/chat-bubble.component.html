@@ -1,5 +1,10 @@
-<div class="imessage">
-  <p [ngClass]="{'from-me': !message.isToMe, 'from-them': message.isToMe}">
-    {{message.text}} {{message.time | date:'hh:mm' }}
+<div class="imessage animated" [ngClass]="{'fadeInLeft': message.isToMe, 'fadeInRight': !message.isToMe}">
+  <p class="" [ngClass]="{'from-me': !message.isToMe, 'from-them': message.isToMe}">
+    <span>
+       {{message.text}}
+    </span>
+    <span style="left: 0px !important; position: relative; font-size: 10px;" [dir]="'rtl'">
+       {{message.time | date:'hh:mm' }}
+    </span>
   </p>
 </div>

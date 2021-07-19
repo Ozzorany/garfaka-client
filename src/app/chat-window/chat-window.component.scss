@@ -1,0 +1,13 @@
+.search-input-form {
+  border: 2px solid var(--main-theme-color) !important;
+}
+
+.search-input-form.focus, .search-input-form:focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.image {
+  background-image: url("../../assets/img/chat_background.jpg");
+  position: relative;
+}

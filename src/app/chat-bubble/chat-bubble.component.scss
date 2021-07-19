@@ -1,5 +1,4 @@
 .imessage {
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   font-family: "SanFrancisco";
@@ -76,7 +75,8 @@ p.from-them:before {
 }
 
 p.from-them::after {
-  background-color: #fff;
+
+
   border-bottom-right-radius: 0.5rem;
   left: 20px;
   transform: translate(-30px, -2px);
