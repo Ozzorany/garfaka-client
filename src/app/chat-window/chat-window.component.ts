@@ -20,5 +20,9 @@ export class ChatWindowComponent implements OnInit {
 
   private addMessage(): void {
     this.messages.push(new Message('תות תרנגול', new Date(), new Date().getMilliseconds() % 2 === 0));
+    const scroll = document.getElementById('chat-window');
+    setTimeout(() => {
+      scroll.scrollTop = scroll.scrollHeight;
+    }, 10);
   }
 }

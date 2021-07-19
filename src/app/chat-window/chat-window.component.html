@@ -1,7 +1,8 @@
 <div style="border: 10px solid var(--main-theme-color)" class="w-100 h-100 d-flex flex-column justify-content-between">
   <div style="max-height: 80vh;
   height: calc(100% - 40px);
-  overflow-y: auto">
+  overflow-y: auto"
+       id="chat-window">
     <app-chat-bubble [message]="message" *ngFor="let message of messages"></app-chat-bubble>
   </div>
   <div class="d-flex flex-row">
