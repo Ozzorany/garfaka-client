@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class MessageService {
-  private modelUrl = 'http://localhost:5000';
+  private modelUrl = 'https://server-for-garfucka.herokuapp.com';
 
   constructor(private http: HttpClient) {
   }
