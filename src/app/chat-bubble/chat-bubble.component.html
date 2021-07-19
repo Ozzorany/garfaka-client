@@ -1,0 +1,5 @@
+<div class="imessage">
+  <p [ngClass]="{'from-me': !message.isToMe, 'from-them': message.isToMe}">
+    {{message.text}} {{message.time | date:'hh:mm' }}
+  </p>
+</div>
